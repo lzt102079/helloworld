@@ -4,6 +4,3 @@ pre_ci_boot:
  tag: "latest"
 ci:
  - mvn package
- - cp target/docker-demo.war $ALAUDACI_DEST_DIR
- - cp Dockerfile $ALAUDACI_DEST_DIR
- - cp target/docker-demo.war $ALAUDACI_UPLOAD_DIR
