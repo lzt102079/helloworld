@@ -1,0 +1,9 @@
+version: "0.1.0"
+pre_ci_boot:
+ image: 192.0.1.220:30500/alaudaorg/complie
+ tag: "latest"
+ci:
+ - mvn package
+ - cp target/docker-demo.war $ALAUDACI_DEST_DIR
+ - cp Dockerfile $ALAUDACI_DEST_DIR
+ - cp target/docker-demo.war $ALAUDACI_UPLOAD_DIR
