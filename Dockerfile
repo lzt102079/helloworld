@@ -1,7 +1,7 @@
 FROM tomcat:8.5.29-jre8
 
-RUN rm -rf /usr/local/tomcat/webapps/*
-ADD target/docker-demo.war /usr/local/tomcat/webapps/ROOT.war
+WORKDIR target
+ADD docker-demo.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
