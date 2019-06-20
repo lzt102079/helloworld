@@ -1,7 +1,7 @@
 FROM tomcat:8.5.29-jre8
 
-#ADD  docker-demo.war /usr/local/tomcat/webapps/
-ADD  /home/jenkins/workspace/huawei-demo/huawei-demo-hello-world/target/docker-demo.war /usr/local/tomcat/webapps/
+ADD  target/docker-demo.war /usr/local/tomcat/webapps/
+#ADD  /home/jenkins/workspace/huawei-demo/huawei-demo-hello-world/target/docker-demo.war /usr/local/tomcat/webapps/
 
 ### run ###
 EXPOSE 8080
